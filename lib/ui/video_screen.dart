@@ -61,7 +61,6 @@ class _VideoPageState extends State<VideoPage> {
   }
 
   void playVideo() {
-    print("VIDEO URL ${widget.videoURL}");
     if (_controller == null) {
       _controller = VideoPlayerController.network(
           widget.videoURL)

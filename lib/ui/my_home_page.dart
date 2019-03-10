@@ -203,7 +203,6 @@ class _MyHomePageState extends State<MyHomePage> {
       itemCount: snapshot.data.length,
       itemBuilder: (context, itemPosition) {
         Video video = snapshot.data[itemPosition];
-        print('Video VIDEO ${video.channel.icon}');
         return Card(
           color: Colors.grey[850],
           child: Column(
@@ -212,11 +211,12 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               InkWell(onTap: () => _watchVideo(context,video.video),
                 child: Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: NetworkImage(video.thumbnail))),
-                  child: Image.network(video.thumbnail),
+//                  decoration: BoxDecoration(
+//                      image: DecorationImage(
+//                          //fit: BoxFit.fill,
+//                          image: NetworkImage(video.thumbnail))),
+
+                  child: Image.network(video.thumbnail,fit: BoxFit.fitWidth,key: UniqueKey(),),
                 ),
               ),
               ListTile(
