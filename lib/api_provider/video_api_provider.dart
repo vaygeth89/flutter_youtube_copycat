@@ -20,6 +20,7 @@ class VideoApiProvider extends BaseApi{
 
     if(response.statusCode  == 200){
       Iterable list = json.decode(response.body);
+      print("Boddy ${response.body}");
       return list.map((video)=> Video.fromJson(video)).toList();
     }
     else{

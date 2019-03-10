@@ -203,7 +203,7 @@ class _MyHomePageState extends State<MyHomePage> {
       itemCount: snapshot.data.length,
       itemBuilder: (context, itemPosition) {
         Video video = snapshot.data[itemPosition];
-        print('Video Title ${video.title}');
+        print('Video VIDEO ${video.channel.icon}');
         return Card(
           color: Colors.grey[850],
           child: Column(
