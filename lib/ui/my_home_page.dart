@@ -216,7 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //                          //fit: BoxFit.fill,
 //                          image: NetworkImage(video.thumbnail))),
 
-                  child: Image.network(video.thumbnail,fit: BoxFit.fitWidth,key: UniqueKey(),),
+                  child: Image.network(video.thumbnail  ,fit: BoxFit.fitWidth,key: UniqueKey(),),
                 ),
               ),
               ListTile(
